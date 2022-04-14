@@ -1,16 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextComponent, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      
-      <Text style={styles.text}>Hello World!</Text>
-      
-      <StatusBar style="auto" />
-    </View>
+    <Text style={styles}/>
   );
 }
+
+export function ViewComponent ({styles}){
+  return(
+    <View style={styles.container}>
+      
+    <Text style={styles.text}>Hello World!</Text>
+  
+    <StatusBar style="auto" />
+  </View>
+  );
+} 
 
 const styles = StyleSheet.create({
   container: {
@@ -22,5 +28,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 50,
+    fontWeight: 600
   }
 });
